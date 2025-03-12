@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>统计 - 掌控习惯</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .container {
+        padding-bottom: 80px;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .stats-card {
+        background: white;
+        border-radius: var(--border-radius);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        padding: 15px;
+      }
+      .calendar-day {
+        aspect-ratio: 1;
+        border-radius: 4px;
+        background: #eee;
+      }
+      .calendar-day.completed {
+        background: var(--primary-color);
+      }
+      .calendar-day.partial {
+        background: #a5d6a7;
+      }
+      .habit-chart {
+        height: 200px;
+        margin: 20px 0;
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+        padding: 0 15px;
+      }
+      .chart-bar {
+        flex: 1;
+        background: var(--primary-color);
+        border-radius: 4px 4px 0 0;
+      }
+      .chart-label {
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>统计</h1>
+        <p>追踪你的进步</p>
+      </header>
+
+      <div class="stats-grid">
+        <div class="stats-card">
+          <div class="stats-number">85%</div>
+          <div class="stats-label">本周完成率</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-number">12</div>
+          <div class="stats-label">连续天数</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-number">45</div>
+          <div class="stats-label">累计完成</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-number">3</div>
+          <div class="stats-label">活跃习惯</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>打卡日历</h2>
+        <div class="calendar">
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day partial"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day partial"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day partial"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day completed"></div>
+          <div class="calendar-day"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>完成趋势</h2>
+        <div class="habit-chart">
+          <div class="chart-bar" style="height: 60%"></div>
+          <div class="chart-bar" style="height: 80%"></div>
+          <div class="chart-bar" style="height: 70%"></div>
+          <div class="chart-bar" style="height: 90%"></div>
+          <div class="chart-bar" style="height: 85%"></div>
+          <div class="chart-bar" style="height: 75%"></div>
+          <div class="chart-bar" style="height: 95%"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <div class="chart-label">周一</div>
+          <div class="chart-label">周二</div>
+          <div class="chart-label">周三</div>
+          <div class="chart-label">周四</div>
+          <div class="chart-label">周五</div>
+          <div class="chart-label">周六</div>
+          <div class="chart-label">周日</div>
+        </div>
+      </div>
+
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i>
+          <div>首页</div>
+        </a>
+        <a href="habits.html" class="nav-item">
+          <i class="fas fa-list"></i>
+          <div>习惯</div>
+        </a>
+        <a href="statistics.html" class="nav-item active">
+          <i class="fas fa-chart-bar"></i>
+          <div>统计</div>
+        </a>
+        <a href="profile.html" class="nav-item">
+          <i class="fas fa-user"></i>
+          <div>我的</div>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

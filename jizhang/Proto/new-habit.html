@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>添加新习惯 - 掌控习惯</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .container {
+        padding-bottom: 80px;
+      }
+      .cue-section {
+        margin-top: 20px;
+        padding: 15px;
+        background: #f9f9f9;
+        border-radius: var(--border-radius);
+      }
+      .cue-title {
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>添加新习惯</h1>
+        <p>设计你的习惯养成计划</p>
+      </header>
+
+      <form>
+        <div class="form-group">
+          <label for="habit-name">习惯名称</label>
+          <input
+            type="text"
+            id="habit-name"
+            placeholder="例如：晨跑、冥想、读书"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="habit-description">描述</label>
+          <textarea
+            id="habit-description"
+            rows="3"
+            placeholder="描述这个习惯的具体内容和目标"
+          ></textarea>
+        </div>
+
+        <div class="cue-section">
+          <div class="cue-title">
+            <i class="fas fa-lightbulb"></i> 习惯设计四要素
+          </div>
+          <div class="form-group">
+            <label for="obvious">让它显而易见</label>
+            <input
+              type="text"
+              id="obvious"
+              placeholder="在什么地方/时间提醒自己"
+            />
+          </div>
+          <div class="form-group">
+            <label for="attractive">让它具有吸引力</label>
+            <input
+              type="text"
+              id="attractive"
+              placeholder="和什么愉悦的事情配对"
+            />
+          </div>
+          <div class="form-group">
+            <label for="easy">让它简单易行</label>
+            <input type="text" id="easy" placeholder="如何降低行动门槛" />
+          </div>
+          <div class="form-group">
+            <label for="satisfying">让它令人满意</label>
+            <input
+              type="text"
+              id="satisfying"
+              placeholder="完成后如何奖励自己"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="frequency">重复频率</label>
+          <select id="frequency">
+            <option value="daily">每天</option>
+            <option value="weekly">每周</option>
+            <option value="workdays">工作日</option>
+            <option value="weekends">周末</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reminder-time">提醒时间</label>
+          <input type="time" id="reminder-time" />
+        </div>
+
+        <button type="submit" class="btn">
+          <i class="fas fa-check"></i> 创建习惯
+        </button>
+      </form>
+
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i>
+          <div>首页</div>
+        </a>
+        <a href="habits.html" class="nav-item">
+          <i class="fas fa-list"></i>
+          <div>习惯</div>
+        </a>
+        <a href="statistics.html" class="nav-item">
+          <i class="fas fa-chart-bar"></i>
+          <div>统计</div>
+        </a>
+        <a href="profile.html" class="nav-item">
+          <i class="fas fa-user"></i>
+          <div>我的</div>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

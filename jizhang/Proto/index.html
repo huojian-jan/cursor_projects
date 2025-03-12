@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>掌控习惯</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>掌控习惯</h1>
+        <p>建立更好的自己</p>
+      </header>
+
+      <div class="card">
+        <h2>今日习惯</h2>
+        <div class="habit-item">
+          <div class="habit-check"></div>
+          <div class="habit-info">
+            <div class="habit-title">晨跑30分钟</div>
+            <div class="habit-streak">连续完成: 5天</div>
+          </div>
+        </div>
+        <div class="habit-item">
+          <div class="habit-check completed"></div>
+          <div class="habit-info">
+            <div class="habit-title">冥想15分钟</div>
+            <div class="habit-streak">连续完成: 12天</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>习惯统计</h2>
+        <div class="stats-card">
+          <div class="stats-number">85%</div>
+          <div class="stats-label">本周完成率</div>
+        </div>
+      </div>
+
+      <button class="btn" onclick="window.location.href='new-habit.html'">
+        <i class="fas fa-plus"></i> 添加新习惯
+      </button>
+
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-item active">
+          <i class="fas fa-home"></i>
+          <div>首页</div>
+        </a>
+        <a href="habits.html" class="nav-item">
+          <i class="fas fa-list"></i>
+          <div>习惯</div>
+        </a>
+        <a href="statistics.html" class="nav-item">
+          <i class="fas fa-chart-bar"></i>
+          <div>统计</div>
+        </a>
+        <a href="profile.html" class="nav-item">
+          <i class="fas fa-user"></i>
+          <div>我的</div>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

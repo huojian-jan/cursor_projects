@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的习惯 - 掌控习惯</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .container {
+        padding-bottom: 80px;
+      }
+      .habit-filter {
+        display: flex;
+        margin-bottom: 20px;
+        overflow-x: auto;
+        padding: 5px 0;
+      }
+      .filter-btn {
+        padding: 8px 16px;
+        margin-right: 10px;
+        border: 1px solid var(--primary-color);
+        border-radius: 20px;
+        background: white;
+        color: var(--primary-color);
+        white-space: nowrap;
+      }
+      .filter-btn.active {
+        background: var(--primary-color);
+        color: white;
+      }
+      .habit-actions {
+        display: flex;
+        gap: 10px;
+        margin-left: auto;
+      }
+      .action-btn {
+        padding: 5px;
+        color: #666;
+      }
+      .progress-bar {
+        height: 4px;
+        background: #eee;
+        border-radius: 2px;
+        margin-top: 5px;
+      }
+      .progress-fill {
+        height: 100%;
+        background: var(--primary-color);
+        border-radius: 2px;
+        width: 75%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>我的习惯</h1>
+        <p>管理你的所有习惯</p>
+      </header>
+
+      <div class="habit-filter">
+        <button class="filter-btn active">全部</button>
+        <button class="filter-btn">进行中</button>
+        <button class="filter-btn">已完成</button>
+        <button class="filter-btn">已暂停</button>
+      </div>
+
+      <div class="card">
+        <div class="habit-item">
+          <div class="habit-check"></div>
+          <div class="habit-info">
+            <div class="habit-title">晨跑30分钟</div>
+            <div class="habit-streak">每天 · 6:30</div>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="habit-actions">
+            <a href="#" class="action-btn"><i class="fas fa-edit"></i></a>
+            <a href="#" class="action-btn"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+        </div>
+
+        <div class="habit-item">
+          <div class="habit-check completed"></div>
+          <div class="habit-info">
+            <div class="habit-title">冥想15分钟</div>
+            <div class="habit-streak">每天 · 7:00</div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="habit-actions">
+            <a href="#" class="action-btn"><i class="fas fa-edit"></i></a>
+            <a href="#" class="action-btn"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+        </div>
+
+        <div class="habit-item">
+          <div class="habit-check"></div>
+          <div class="habit-info">
+            <div class="habit-title">读书30分钟</div>
+            <div class="habit-streak">工作日 · 21:00</div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="habit-actions">
+            <a href="#" class="action-btn"><i class="fas fa-edit"></i></a>
+            <a href="#" class="action-btn"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="btn"
+        onclick="window.location.href='new-habit.html'"
+        style="margin-top: 20px"
+      >
+        <i class="fas fa-plus"></i> 添加新习惯
+      </button>
+
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i>
+          <div>首页</div>
+        </a>
+        <a href="habits.html" class="nav-item active">
+          <i class="fas fa-list"></i>
+          <div>习惯</div>
+        </a>
+        <a href="statistics.html" class="nav-item">
+          <i class="fas fa-chart-bar"></i>
+          <div>统计</div>
+        </a>
+        <a href="profile.html" class="nav-item">
+          <i class="fas fa-user"></i>
+          <div>我的</div>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>

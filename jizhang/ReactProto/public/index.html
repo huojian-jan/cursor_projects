@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ug">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#007AFF" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>ئادەتنى كونترول قىلىش</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #f2f2f7;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript
+      >بۇ ئەپنى ئىشلىتىش ئۈچۈن JavaScript نى قوزغىتىشىڭىز كېرەك.</noscript
+    >
+    <div id="root"></div>
+
+    <!-- 这里会注入React应用 -->
+    <script>
+      // 模拟React应用加载
+      document.addEventListener("DOMContentLoaded", function () {
+        // 在实际部署时，这里会由React应用替代
+        const root = document.getElementById("root");
+
+        // 如果没有React环境，显示提示信息
+        if (!window.React) {
+          const message = document.createElement("div");
+          message.style.padding = "20px";
+          message.style.textAlign = "center";
+          message.style.marginTop = "50px";
+          message.innerHTML = `
+          <h2>React لايىھە نۇسخىسى</h2>
+          <p>بۇ React لايىھە نۇسخىسى ھۆججىتى. تولۇق ئىقتىدارنى كۆرۈش ئۈچۈن، React مۇھىتىدا ئىجرا قىلىڭ.</p>
+          <p>سىز <code>src</code> مۇندەرىجىسىدە بارلىق كومپونېنت ۋە بەتلەرنىڭ كودىنى كۆرەلەيسىز.</p>
+        `;
+          root.appendChild(message);
+        }
+      });
+    </script>
+  </body>
+</html>

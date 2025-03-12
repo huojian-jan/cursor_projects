@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    container_name: library_api
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - MYSQL_SERVER=db
+      - MYSQL_USER=library_user
+      - MYSQL_PASSWORD=library_password
+      - MYSQL_DB=library
+      - MYSQL_PORT=3306
+    volumes:
+      - ./:/app
+    networks:
+      - library-network
+
+  db:
+    image: mysql:8.0
+    container_name: library_db
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=library
+      - MYSQL_USER=library_user
+      - MYSQL_PASSWORD=library_password
+      - MYSQL_ROOT_PASSWORD=root_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - library-network
+
+networks:
+  library-network:
+    driver: bridge
+
+volumes:
+  mysql_data:

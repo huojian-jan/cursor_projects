@@ -1,0 +1,148 @@
+<Window x:Class="bridge.Views.SingleSpan.SingleSpanComputeResultHelpView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bridge.Views"
+        mc:Ignorable="d"
+        Title="计算结果帮助"
+        Width="{Binding WindowWidth}"
+        Height="{Binding WindowHeight}"
+        WindowState="{Binding WindowState}"
+        StateChanged="Window_StateChanged"
+        ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner">
+
+    <!-- 按钮样式 -->
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#2a7d8c"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="15,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="#1e5c68" 
+                                BorderThickness="1"
+                                CornerRadius="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#3a8d9c"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#1a6d7c"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CircleButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3F8C99"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="#2C636D" 
+                                BorderThickness="1"
+                                CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#4FA8B8"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#2C636D"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Border CornerRadius="5" Background="White" Margin="6">
+        <Border.Effect>
+            <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="0" Opacity="0.5"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            
+            <!-- 顶部标题栏 -->
+            <Border Grid.Row="0" Background="#3F8C99" CornerRadius="5,5,0,0">
+                <TextBlock Text="计算结果说明" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Foreground="White" 
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </Border>
+            
+            <!-- 主体内容区域 -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="20">
+                    <TextBlock TextWrapping="Wrap" Margin="0,10" FontSize="16">
+                        <Run FontWeight="Bold" FontSize="18">计算结果说明：</Run>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run FontWeight="Bold">1. 矢跨比λ：</Run>
+                        <LineBreak/>
+                        矢跨比是桥梁拱高与跨度的比值，是评价拱桥形状的重要参数。本系统计算的矢跨比是根据输入的桥跨长度和预设的结构力学模型计算得出的推荐值，通常在0.1~0.2之间。
+                        <LineBreak/><LineBreak/>
+                        
+                        <Run FontWeight="Bold">2. 三节苗平苗根径范围R1：</Run>
+                        <LineBreak/>
+                        三节苗是组成桥梁拱圈的重要构件，平苗根径是其主要的尺寸参数。本系统根据输入的三节苗数目，通过力学计算给出了合理的直径范围，单位为毫米。
+                        <LineBreak/><LineBreak/>
+                        
+                        <Run FontWeight="Bold">3. 五节苗平苗根径范围R2：</Run>
+                        <LineBreak/>
+                        五节苗同样是组成桥梁拱圈的重要构件，其平苗根径范围是根据输入的五节苗数目计算得出的，单位为毫米。
+                        <LineBreak/><LineBreak/>
+                        
+                        <Run FontWeight="Bold">4. 建议：</Run>
+                        <LineBreak/>
+                        本计算结果仅供参考，三节苗与五节苗最粗的木材应放置最外侧。设计师在实际应用中，还需结合工程经验和实际条件进行综合考虑。
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+            
+            <!-- 底部按钮区域 -->
+            <Grid Grid.Row="2">
+                <Button Content="关闭" 
+                       Style="{StaticResource ButtonStyle}"
+                       x:Name="Back"
+                       HorizontalAlignment="Center"/>
+            </Grid>
+            
+            <!-- 底部状态栏 -->
+            <Border Grid.Row="3" Background="#3F8C99" CornerRadius="0,0,5,5">
+                <TextBlock Text="版权所有 © 2023-2024 中国木拱桥智能设计系统" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"
+                           Foreground="White"
+                           FontSize="12"/>
+            </Border>
+        </Grid>
+    </Border>
+</Window> 

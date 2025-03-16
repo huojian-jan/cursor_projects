@@ -1,0 +1,400 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\wang_projects\\bridge\\bridge\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\multispan\\multispanview2view.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\multispan\\multispanview2view.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\multispan\\multispanview2helpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\multispan\\multispanview2helpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\multispan\\multispanview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\multispan\\multispanview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\multispan\\multispanhelpview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\multispan\\multispanhelpview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\multispan\\multispanhelpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\multispan\\multispanhelpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\multispan\\multispancomputeresultview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\multispan\\multispancomputeresultview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\multispan\\multispancomputeresulthelpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\multispan\\multispancomputeresulthelpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\multispan\\multispancomputeresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\multispan\\multispancomputeresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\singlespan\\singlespancomputingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\singlespan\\singlespancomputingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\singlespan\\singlespanview2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\singlespan\\singlespanview2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\multispan\\multispanview2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\multispan\\multispanview2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\multispan\\multispanhelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\multispan\\multispanhelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\multispan\\multispanview2helpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\multispan\\multispanview2helpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\multispan\\multispancomputeresulthelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\multispan\\multispancomputeresulthelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\singlespan\\singlespancomputeresulthelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\singlespan\\singlespancomputeresulthelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\singlespan\\singlespanview2helpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\singlespan\\singlespanview2helpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\singlespan\\singlespancomputehelpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\singlespan\\singlespancomputehelpview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\singlespan\\singlespancomputehelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\singlespan\\singlespancomputehelpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\singlespan\\singlespanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\singlespan\\singlespanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\singlespan\\singlespancomputeresultview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\singlespan\\singlespancomputeresultview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\views\\singlespan\\singlespancomputeresultview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\views\\singlespan\\singlespancomputeresultview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|d:\\wang_projects\\bridge\\bridge\\bridge\\viewmodels\\singlespan\\singlespancomputeresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D8B863F-49AA-4885-86F5-4B287BF3DE2D}|bridge\\bridge.csproj|solutionrelative:bridge\\viewmodels\\singlespan\\singlespancomputeresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MultiSpanView2View.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanView2View.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\MultiSpan\\MultiSpanView2View.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanView2View.xaml",
+              "RelativeToolTip": "bridge\\Views\\MultiSpan\\MultiSpanView2View.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T10:17:02.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MultiSpanView2HelpView.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanView2HelpView.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\MultiSpan\\MultiSpanView2HelpView.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanView2HelpView.xaml",
+              "RelativeToolTip": "bridge\\Views\\MultiSpan\\MultiSpanView2HelpView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T10:16:59.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MultiSpanView.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanView.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\MultiSpan\\MultiSpanView.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanView.xaml",
+              "RelativeToolTip": "bridge\\Views\\MultiSpan\\MultiSpanView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T10:16:56.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MultiSpanHelpView.xaml.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml.cs",
+              "RelativeDocumentMoniker": "bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml.cs",
+              "RelativeToolTip": "bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T10:16:55.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAQwLAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T10:14:29.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MultiSpanHelpViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanHelpViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\MultiSpan\\MultiSpanHelpViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanHelpViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\MultiSpan\\MultiSpanHelpViewModel.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowBQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:33:21.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MultiSpanComputeResultView.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanComputeResultView.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\MultiSpan\\MultiSpanComputeResultView.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanComputeResultView.xaml",
+              "RelativeToolTip": "bridge\\Views\\MultiSpan\\MultiSpanComputeResultView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T08:51:23.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MultiSpanComputeResultHelpViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultHelpViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultHelpViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultHelpViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultHelpViewModel.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:55:22.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MultiSpanComputeResultViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\MultiSpan\\MultiSpanComputeResultViewModel.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAawLMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:09:10.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MultiSpanView2HelpViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanView2HelpViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\MultiSpan\\MultiSpanView2HelpViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanView2HelpViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\MultiSpan\\MultiSpanView2HelpViewModel.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwDwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:55:30.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MultiSpanComputeResultHelpView.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanComputeResultHelpView.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\MultiSpan\\MultiSpanComputeResultHelpView.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanComputeResultHelpView.xaml",
+              "RelativeToolTip": "bridge\\Views\\MultiSpan\\MultiSpanComputeResultHelpView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T09:02:03.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MultiSpanHelpView.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml",
+              "RelativeToolTip": "bridge\\Views\\MultiSpan\\MultiSpanHelpView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T09:32:38.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SingleSpanComputeHelpView.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\SingleSpan\\SingleSpanComputeHelpView.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\SingleSpan\\SingleSpanComputeHelpView.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\SingleSpan\\SingleSpanComputeHelpView.xaml",
+              "RelativeToolTip": "bridge\\Views\\SingleSpan\\SingleSpanComputeHelpView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T09:35:52.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SingleSpanComputeResultHelpViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultHelpViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultHelpViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultHelpViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultHelpViewModel.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAADwvzwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:54:27.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SingleSpanComputingViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputingViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputingViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputingViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputingViewModel.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAwwE0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:58:42.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MultiSpanView2ViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanView2ViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\MultiSpan\\MultiSpanView2ViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\MultiSpan\\MultiSpanView2ViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\MultiSpan\\MultiSpanView2ViewModel.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:57:59.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SingleSpanView2ViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanView2ViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\SingleSpan\\SingleSpanView2ViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanView2ViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\SingleSpan\\SingleSpanView2ViewModel.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAwwIAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:58:23.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SingleSpanComputeHelpViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputeHelpViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputeHelpViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputeHelpViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputeHelpViewModel.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAwwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:27:23.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SingleSpanView2HelpViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanView2HelpViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\SingleSpan\\SingleSpanView2HelpViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanView2HelpViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\SingleSpan\\SingleSpanView2HelpViewModel.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwEIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:53:39.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SingleSpanViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\SingleSpan\\SingleSpanViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\SingleSpan\\SingleSpanViewModel.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAG0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T09:26:26.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SingleSpanComputeResultView.xaml",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml",
+              "RelativeDocumentMoniker": "bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml",
+              "RelativeToolTip": "bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T08:51:38.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SingleSpanComputeResultView.xaml.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml.cs",
+              "RelativeDocumentMoniker": "bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml.cs",
+              "RelativeToolTip": "bridge\\Views\\SingleSpan\\SingleSpanComputeResultView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:51:36.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SingleSpanComputeResultViewModel.cs",
+              "DocumentMoniker": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultViewModel.cs",
+              "RelativeDocumentMoniker": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultViewModel.cs",
+              "ToolTip": "D:\\wang_projects\\bridge\\bridge\\bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultViewModel.cs",
+              "RelativeToolTip": "bridge\\ViewModels\\SingleSpan\\SingleSpanComputeResultViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T08:51:31.908Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

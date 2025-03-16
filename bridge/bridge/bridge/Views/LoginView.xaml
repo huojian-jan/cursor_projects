@@ -1,0 +1,244 @@
+<Window x:Class="bridge.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:cal="http://www.caliburnproject.org"
+             xmlns:local="clr-namespace:bridge.Views"
+             xmlns:extensions="clr-namespace:bridge.Extensions"
+             mc:Ignorable="d" 
+            Width="900"
+            WindowStartupLocation="CenterScreen"
+            Height="680"
+            ResizeMode="CanMinimize"
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <Window.Resources>
+        <!-- 转换器 -->
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        
+        <!-- 自定义按钮样式 -->
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3F8C99"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#216570"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#164950"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="#A0A0A0"/>
+                                <Setter Property="Foreground" Value="#E0E0E0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- 带水印和圆角的文本框样式 -->
+        <Style x:Key="WatermarkTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <Grid>
+                                <TextBlock x:Name="WatermarkText"
+                                           Text="{TemplateBinding Tag}"
+                                           Visibility="Collapsed"
+                                           Foreground="Gray"
+                                           Margin="5,0,0,0"
+                                           VerticalAlignment="Center"/>
+                                <ScrollViewer x:Name="PART_ContentHost" 
+                                              Margin="5,0,0,0"
+                                              VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="Visibility" Value="Visible" TargetName="WatermarkText"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#3F8C99"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!-- 带圆角的密码框样式 -->
+        <Style x:Key="RoundedPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5,0,0,0"
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="#3F8C99"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 顶部标题区域 -->
+        <Border Grid.Row="0" Background="#3F8C99">
+            <TextBlock Text="中国木拱桥智能设计系统" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       FontSize="48" 
+                       FontWeight="Bold"
+                       Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="3" Color="White" Opacity="0.7" BlurRadius="5"/>
+                </TextBlock.Effect>
+            </TextBlock>
+        </Border>
+        
+        <!-- 主体内容区域 -->
+        <Grid Grid.Row="1" Background="#E4F2F5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- 左侧木拱桥图片 -->
+            <Border Grid.Column="0" Margin="40">
+                <Image Source="/bridge;component/Resources/wooden_bridge.png" 
+                       Stretch="Uniform"/>
+            </Border>
+            
+            <!-- 右侧登录区域 -->
+            <Border Grid.Column="1" 
+                    Background="#F5F5F5" 
+                    Margin="20,40,40,40" 
+                    CornerRadius="8"
+                    BorderBrush="#DDDDDD"
+                    BorderThickness="1"
+                    Padding="20">
+                <StackPanel>
+                    <!-- 登录标题 -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,30">
+                        <Image Source="/bridge;component/Resources/user_icon.png" Width="32" Height="32" Margin="0,0,10,0"/>
+                        <TextBlock Text="用户登录" 
+                                   FontSize="24" 
+                                   Foreground="#3F8C99"/>
+                    </StackPanel>
+                    
+                    <!-- 用户名 - 使用水印和圆角样式 -->
+                    <DockPanel Margin="0,10,0,10">
+                        <TextBlock Text="用户名:" 
+                                   Width="70" 
+                                   VerticalAlignment="Center"/>
+                        <TextBox x:Name="Username" 
+                                 Tag="请输入用户名"
+                                 Style="{StaticResource WatermarkTextBoxStyle}"/>
+                    </DockPanel>
+                    
+                    <!-- 密码 - 使用圆角样式 -->
+                    <DockPanel Margin="0,10,0,10">
+                        <TextBlock Text="密  码:" 
+                                   Width="70" 
+                                   VerticalAlignment="Center"/>
+                        <PasswordBox x:Name="Password" 
+                                    Style="{StaticResource RoundedPasswordBoxStyle}"
+                                    extensions:PasswordBoxHelper.BindPassword="True"
+                                    extensions:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </DockPanel>
+                    
+                    <!-- 验证码 - 支持数据绑定和点击刷新 -->
+                    <DockPanel Margin="0,10,0,10">
+                        <TextBlock Text="验证码:" 
+                                   Width="70" 
+                                   VerticalAlignment="Center"/>
+                        <TextBox x:Name="CaptchaText" 
+                                 Width="130"
+                                 Tag="请输入验证码"
+                                 Style="{StaticResource WatermarkTextBoxStyle}"/>
+                        <Border Width="80" 
+                                Height="30" 
+                                Background="#3F8C99"
+                                Margin="10,0,0,0"
+                                CornerRadius="4"
+                                VerticalAlignment="Center"
+                                Cursor="Hand"
+                                x:Name="RefreshCaptcha"
+                                ToolTip="点击刷新验证码">
+                            <Grid>
+                                <TextBlock Text="{Binding CaptchaCode}" 
+                                           Foreground="White" 
+                                           FontWeight="Bold"
+                                           FontSize="16"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </DockPanel>
+                    
+                    <!-- 登录按钮 - 使用自定义样式 -->
+                    <Button x:Name="Login" 
+                            Content="登 录" 
+                            Width="120" 
+                            Height="35"
+                            Margin="0,30,0,0"
+                            HorizontalAlignment="Center"
+                            IsEnabled="{Binding CanLogin}"
+                            Style="{StaticResource CustomButtonStyle}"/>
+                    
+                    <!-- 错误信息显示 -->
+                    <TextBlock Text="{Binding ErrorMessage}"
+                               Foreground="Red"
+                               HorizontalAlignment="Center"
+                               Margin="0,10,0,0"
+                               Visibility="{Binding HasError, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        
+        <!-- 底部状态栏 -->
+        <Border Grid.Row="2" Background="#3F8C99">
+            <TextBlock Text="版权所有 © 2023-2024 中国木拱桥智能设计系统" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       FontSize="12"/>
+        </Border>
+    </Grid>
+</Window> 

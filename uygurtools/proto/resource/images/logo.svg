@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <style>
+    .text { font-family: Arial, sans-serif; font-weight: bold; }
+    .ai { fill: #333; }
+    .tools { fill: #3b82f6; }
+  </style>
+  <text x="10" y="28" class="text ai" font-size="24">AI</text>
+  <text x="36" y="28" class="text tools" font-size="24">工具集</text>
+</svg> 

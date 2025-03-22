@@ -13,7 +13,6 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
 }) => {
   const languages = [
     { code: 'zh', name: '中文' },
-    { code: 'en', name: 'English' },
     { code: 'ug', name: 'ئۇيغۇرچە' }
   ];
 

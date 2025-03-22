@@ -36,12 +36,6 @@ const Sidebar: React.FC = () => {
       trigger={null}
     >
       <div className="flex flex-col h-full">
-        <div className="border-b">
-          <div className="p-4">
-            {!collapsed && <span className="font-bold text-lg">工具分类</span>}
-            {collapsed && <span className="font-bold text-lg"></span>}
-          </div>
-        </div>
         
         <div className="flex-grow overflow-auto">
           <Menu mode="inline" className="border-r-0" defaultSelectedKeys={['audio-tools']}>

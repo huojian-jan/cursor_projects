@@ -25,15 +25,22 @@ const Header: React.FC = () => {
   };
 
   return (
-    <AntHeader className="bg-gray-50 px-6 flex items-center justify-between shadow-sm">
-      <div className="flex items-center">
+    <AntHeader className="bg-gray-50 px-6 flex items-center shadow-sm">
+      {/* 左侧Logo区域 */}
+      <div className="flex-none">
         <Link to="/" className="flex items-center">
-          <img src="/resource/images/logo.svg" alt="AI工具集" className="h-10" />
+          <img src="/resource/images/sheep.png" alt="AI工具集" className="h-10" />
           <span className="text-xl font-bold ml-2 text-gray-800">AI工具集</span>
         </Link>
       </div>
-
-      <div className="flex items-center">
+      
+      {/* 中间标语区域 */}
+      <div className="flex-grow flex justify-center">
+        <h1 className="text-3xl font-extrabold text-gray-700">发现优质AI工具，提升工作效率</h1>
+      </div>
+      
+      {/* 右侧用户区域 */}
+      <div className="flex-none flex items-center">
         {/* 语言切换按钮 */}
         <LanguageSwitcher 
           currentLanguage="zh"

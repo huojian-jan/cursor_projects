@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字转语音 | AI工具集</title>
+    <link rel="icon" href="../resource/images/favicon.svg" type="image/svg+xml">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.5;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+            position: relative;
+        }
+        
+        /* 控制区域宽度调整 */
+        .control-container {
+            max-width: 500px;
+            margin: 0 0 30px;
+        }
+        
+        .control-row {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
+        .control-label {
+            width: 80px;
+            text-align: center;
+            font-weight: 500;
+            padding: 8px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .control-input {
+            width: 180px;
+        }
+        
+        select, input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        .textarea-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 15px;
+            font-size: 16px;
+            resize: none;
+        }
+        
+        .char-counter {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .buttons-container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        
+        button {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 25px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2563eb;
+        }
+        
+        /* 音频播放器样式 */
+        .audio-player {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f7ff;
+            border-radius: 12px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .audio-player.active {
+            display: flex;
+        }
+        
+        .player-info {
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 500;
+            color: #3b82f6;
+            width: 100%;
+        }
+        
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .loading-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        
+        .loading-indicator span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        
+        .loading-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .control-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .control-label {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            
+            .buttons-container {
+                justify-content: center;
+            }
+        }
+        
+        /* 音频播放器控制按钮样式 */
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        audio {
+            flex: 1;
+            margin-right: 10px;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .download-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        .download-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* 滑块和标签对齐 */
+        .control-row {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center; /* 确保垂直居中对齐 */
+        }
+        
+        /* 滑块容器相对定位，用于悬停值显示 */
+        .slider-container {
+            position: relative;
+            width: 100%;
+        }
+        
+        /* 滑块值显示样式 */
+        .slider-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3b82f6;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none; /* 防止阻挡滑块操作 */
+        }
+        
+        /* 三角箭头 */
+        .slider-value:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #3b82f6 transparent transparent transparent;
+        }
+        
+        /* 悬停时显示值 */
+        .slider-container:hover .slider-value {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="control-container">
+            <div class="control-row">
+                <div class="control-label">语言</div>
+                <div class="control-input">
+                    <select id="languageSelect">
+                        <option value="zh">汉语</option>
+                        <option value="en">英语</option>
+                        <option value="ug">维吾尔语</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-row">
+                <div class="control-label">语音</div>
+                <div class="control-input">
+                    <select id="voiceSelect">
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-row">
+                <div class="control-label">语速</div>
+                <div class="control-input">
+                    <div class="slider-container">
+                        <div id="speedValue" class="slider-value">1</div>
+                        <input type="range" id="speedSlider" min="0.1" max="3.0" value="1" step="0.1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="textarea-container">
+            <textarea id="textInput" placeholder="请输入要转换为语音的文字..." maxlength="10000"></textarea>
+            <div class="char-counter"><span id="charCount">0</span>/10000</div>
+        </div>
+        
+        <div class="buttons-container">
+            <button id="listenBtn">试听</button>
+            <button id="generateBtn">生成</button>
+        </div>
+        
+        <!-- 修改音频播放组件，添加下载按钮 -->
+        <div id="audioPlayer" class="audio-player">
+            <div class="player-info">正在加载音频...</div>
+            <div class="loading-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="audio-controls">
+                <audio id="audioElement" controls></audio>
+                <button id="downloadAudioBtn" class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                    </svg>
+                    下载
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 获取DOM元素
+        const textInput = document.getElementById('textInput');
+        const charCount = document.getElementById('charCount');
+        const speedSlider = document.getElementById('speedSlider');
+        const speedValue = document.getElementById('speedValue');
+        const listenBtn = document.getElementById('listenBtn');
+        const generateBtn = document.getElementById('generateBtn');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playerInfo = document.querySelector('.player-info');
+        const loadingIndicator = document.querySelector('.loading-indicator');
+        const audioElement = document.getElementById('audioElement');
+        
+        // 更新字符计数
+        textInput.addEventListener('input', function() {
+            const count = this.value.length;
+            charCount.textContent = count;
+        });
+        
+        // 确保语速值显示初始化为1
+        document.addEventListener('DOMContentLoaded', function() {
+            speedValue.textContent = speedSlider.value;
+        });
+        
+        // 试听按钮点击事件
+        listenBtn.addEventListener('click', function() {
+            const text = textInput.value.trim();
+            if (!text) {
+                alert('请输入要转换的文字');
+                return;
+            }
+            
+            const language = document.getElementById('languageSelect').value;
+            const voice = document.getElementById('voiceSelect').value;
+            const speed = speedSlider.value;
+            
+            // 显示播放器并设置为加载状态
+            audioPlayer.classList.add('active');
+            audioElement.style.display = 'none';
+            loadingIndicator.style.display = 'flex';
+            playerInfo.textContent = '正在加载音频...';
+            
+            // 模拟API调用和加载时间
+            setTimeout(function() {
+                // 使用自定义音频文件
+                const audioSrc = '../resource/audio/custom_audio.m4a';
+                
+                // 设置音频源并显示播放控件
+                audioElement.src = audioSrc;
+                loadingIndicator.style.display = 'none';
+                audioElement.style.display = 'block';
+                
+                // 更新播放器信息
+                const voiceText = voice === 'male' ? '男声' : '女声';
+                playerInfo.textContent = `${language === 'zh' ? '汉语' : (language === 'en' ? '英语' : '维吾尔语')} | ${voiceText} | 语速: ${speed}`;
+                
+                // 加载完成后自动播放
+                audioElement.play();
+            }, 2000); // 模拟2秒的加载时间
+        });
+        
+        // 生成按钮点击事件
+        generateBtn.addEventListener('click', function() {
+            const text = textInput.value.trim();
+            if (!text) {
+                alert('请输入要转换的文字');
+                return;
+            }
+            
+            const language = document.getElementById('languageSelect').value;
+            const voice = document.getElementById('voiceSelect').value;
+            const speed = speedSlider.value;
+            
+            // 显示播放器并设置为加载状态
+            audioPlayer.classList.add('active');
+            audioElement.style.display = 'none';
+            loadingIndicator.style.display = 'flex';
+            playerInfo.textContent = '正在生成音频...';
+            
+            // 模拟API调用和加载时间
+            setTimeout(function() {
+                // 固定使用您的自定义音频文件 - 修改为m4a格式
+                const audioSrc = '../resource/audio/custom_audio.m4a';
+                
+                // 设置音频源并显示播放控件
+                audioElement.src = audioSrc;
+                loadingIndicator.style.display = 'none';
+                audioElement.style.display = 'block';
+                
+                // 更新播放器信息
+                const voiceText = voice === 'male' ? '男声' : '女声';
+                playerInfo.textContent = `${language === 'zh' ? '汉语' : (language === 'en' ? '英语' : '维吾尔语')} | ${voiceText} | 语速: ${speed}`;
+                
+                // 加载完成后自动播放
+                audioElement.play();
+            }, 1500); // 模拟1.5秒的加载时间
+        });
+        
+        // 添加下载按钮功能
+        const downloadAudioBtn = document.getElementById('downloadAudioBtn');
+        
+        // 下载按钮点击事件
+        downloadAudioBtn.addEventListener('click', function() {
+            const audioSrc = audioElement.src;
+            if (!audioSrc) {
+                alert('没有可下载的音频');
+                return;
+            }
+            
+            // 创建一个临时链接并模拟点击下载
+            const link = document.createElement('a');
+            link.href = audioSrc;
+            
+            // 设置文件名
+            const language = document.getElementById('languageSelect').value;
+            const voice = document.getElementById('voiceSelect').value;
+            const fileName = `${language}_${voice}_audio.m4a`;
+            link.download = fileName;
+            
+            // 添加到文档并触发点击
+            document.body.appendChild(link);
+            link.click();
+            
+            // 清理
+            document.body.removeChild(link);
+        });
+        
+        // 更新语速滑块的值显示
+        speedSlider.addEventListener('input', function() {
+            speedValue.textContent = this.value;
+        });
+    </script>
+</body>
+</html> 

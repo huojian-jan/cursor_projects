@@ -11,9 +11,10 @@ interface LoginDialogProps {
   onClose: () => void;
   onLoginSuccess?: () => void;
   onSwitchToRegister: () => void;
+  onSwitchToForgotPassword: () => void;
 }
 
-const LoginDialog: React.FC<LoginDialogProps> = ({ visible, onClose, onLoginSuccess, onSwitchToRegister }) => {
+const LoginDialog: React.FC<LoginDialogProps> = ({ visible, onClose, onLoginSuccess, onSwitchToRegister, onSwitchToForgotPassword }) => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [loginError, setLoginError] = useState<string | null>(null);
@@ -107,9 +108,16 @@ const LoginDialog: React.FC<LoginDialogProps> = ({ visible, onClose, onLoginSucc
           <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox>记住我</Checkbox>
           </Form.Item>
-          <Link to="/forgot-password" className="text-primary hover:underline">
+          <Button 
+            type="link" 
+            className="p-0 text-primary hover:underline"
+            onClick={() => {
+              handleCancel();
+              onSwitchToForgotPassword();
+            }}
+          >
             忘记密码？
-          </Link>
+          </Button>
         </div>
 
         <Form.Item>

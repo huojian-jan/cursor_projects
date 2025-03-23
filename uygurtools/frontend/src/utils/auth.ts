@@ -146,4 +146,36 @@ export const mockRegister = (userData: any): Promise<{ success: boolean; message
       }
     }, 1000);
   });
+};
+
+/**
+ * 模拟重置密码
+ * @param phone 手机号
+ * @param newPassword 新密码
+ * @returns Promise<{ success: boolean; message: string }>
+ */
+export const resetPassword = (phone: string, newPassword: string): Promise<{ success: boolean; message: string }> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      try {
+        // 查找对应手机号的用户
+        const userIndex = users.findIndex(u => u.phone === phone);
+        
+        if (userIndex === -1) {
+          resolve({ success: false, message: '未找到该手机号关联的账号' });
+          return;
+        }
+        
+        // 更新用户密码
+        users[userIndex].password = newPassword;
+        
+        // 输出更新后的用户信息（仅用于开发调试）
+        console.log('密码已重置，用户信息:', users[userIndex]);
+        
+        resolve({ success: true, message: '密码重置成功' });
+      } catch (error) {
+        reject({ success: false, message: '密码重置过程中发生错误' });
+      }
+    }, 1000);
+  });
 }; 

@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
 import LoginDialog from '../auth/LoginDialog';
 import RegisterDialog from '../auth/RegisterDialog';
+import ForgotPasswordDialog from '../auth/ForgotPasswordDialog';
 import UserAvatar from '../user/UserAvatar';
 import { getCurrentUser, User } from '../../utils/auth';
 
@@ -19,6 +20,9 @@ const Header: React.FC = () => {
   
   // 添加状态保存当前登录用户信息
   const [currentUser, setCurrentUser] = useState<User | null>(null);
+  
+  // 控制忘记密码对话框显示
+  const [forgotPasswordVisible, setForgotPasswordVisible] = useState(false);
   
   // 组件挂载时检查是否已登录
   useEffect(() => {
@@ -62,6 +66,12 @@ const Header: React.FC = () => {
   const switchToLogin = () => {
     setRegisterVisible(false);
     setLoginVisible(true);
+  };
+  
+  // 从登录切换到忘记密码
+  const switchToForgotPassword = () => {
+    setLoginVisible(false);
+    setForgotPasswordVisible(true);
   };
   
   // 处理登录成功
@@ -148,6 +158,7 @@ const Header: React.FC = () => {
         onClose={() => setLoginVisible(false)} 
         onLoginSuccess={handleLoginSuccess}
         onSwitchToRegister={switchToRegister}
+        onSwitchToForgotPassword={switchToForgotPassword}
       />
       
       {/* 注册对话框 */}
@@ -155,6 +166,13 @@ const Header: React.FC = () => {
         visible={registerVisible}
         onClose={() => setRegisterVisible(false)}
         onRegisterSuccess={handleRegisterSuccess}
+        onSwitchToLogin={switchToLogin}
+      />
+      
+      {/* 忘记密码对话框 */}
+      <ForgotPasswordDialog
+        visible={forgotPasswordVisible}
+        onClose={() => setForgotPasswordVisible(false)}
         onSwitchToLogin={switchToLogin}
       />
     </>

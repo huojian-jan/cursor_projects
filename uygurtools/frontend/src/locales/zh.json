@@ -1,0 +1,13 @@
+{
+  "header": {
+    "logo_alt": "AI工具集",
+    "home": "首页",
+    "tools": "工具",
+    "about": "关于我们"
+  },
+  "common": {
+    "search": "搜索",
+    "submit": "提交",
+    "cancel": "取消"
+  }
+} 

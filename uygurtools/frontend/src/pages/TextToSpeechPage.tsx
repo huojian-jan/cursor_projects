@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
-import { Layout, Select, Slider, Input, Button, Card, Typography } from 'antd';
-import { DownloadOutlined } from '@ant-design/icons';
+import { Layout, Select, Slider, Input, Button, Card, Typography, Row, Col, Divider } from 'antd';
+import { DownloadOutlined, SoundOutlined, FileTextOutlined } from '@ant-design/icons';
 
 const { Content } = Layout;
 const { TextArea } = Input;
-const { Title } = Typography;
+const { Title, Paragraph } = Typography;
 
 const TextToSpeechPage: React.FC = () => {
   const [text, setText] = useState('');
@@ -72,101 +72,123 @@ const TextToSpeechPage: React.FC = () => {
   };
   
   return (
-    <Content className="site-layout-background p-6">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
-        <Title level={2} className="mb-8 text-center">文字转语音</Title>
-        
-        <div className="mb-8">
-          {/* 控制选项 */}
-          <div className="control-container">
-            <div className="flex items-center mb-6">
-              <div className="w-20 text-right mr-4">语言：</div>
-              <Select 
-                value={language}
-                onChange={setLanguage}
-                className="w-48"
-                options={[
-                  { value: 'zh', label: '汉语' },
-                  { value: 'en', label: '英语' },
-                  { value: 'ug', label: '维吾尔语' }
-                ]}
-              />
-            </div>
-            
-            <div className="flex items-center mb-6">
-              <div className="w-20 text-right mr-4">语音：</div>
-              <Select
-                value={voice}
-                onChange={setVoice}
-                className="w-48"
-                options={[
-                  { value: 'male', label: '男声' },
-                  { value: 'female', label: '女声' }
-                ]}
-              />
-            </div>
-            
-            <div className="flex items-center mb-6">
-              <div className="w-20 text-right mr-4">语速：</div>
-              <div className="w-48">
-                <div className="relative">
-                  <Slider
-                    min={0.1}
-                    max={3.0}
-                    step={0.1}
-                    value={speed}
-                    onChange={setSpeed}
-                    className="w-full"
-                    tooltip={{ formatter: (value) => `${value}` }}
+    <Content className="site-layout-background p-6 min-h-screen">
+      <div className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <Row gutter={24}>
+          <Col span={10}>
+            <Card title="参数设置" className="mb-6 h-full shadow-sm" bordered={false}>
+              <div className="control-container">
+                <div className="flex items-center mb-6">
+                  <div className="w-20 text-right mr-4">语言：</div>
+                  <Select 
+                    value={language}
+                    onChange={setLanguage}
+                    className="w-48"
+                    options={[
+                      { value: 'zh', label: '汉语' },
+                      { value: 'en', label: '英语' },
+                      { value: 'ug', label: '维吾尔语' }
+                    ]}
                   />
                 </div>
+                
+                <div className="flex items-center mb-6">
+                  <div className="w-20 text-right mr-4">语音：</div>
+                  <Select
+                    value={voice}
+                    onChange={setVoice}
+                    className="w-48"
+                    options={[
+                      { value: 'male', label: '男声' },
+                      { value: 'female', label: '女声' }
+                    ]}
+                  />
+                </div>
+                
+                <div className="flex items-center mb-6">
+                  <div className="w-20 text-right mr-4">语速：</div>
+                  <div className="w-48">
+                    <div className="relative">
+                      <Slider
+                        min={0.1}
+                        max={3.0}
+                        step={0.1}
+                        value={speed}
+                        onChange={setSpeed}
+                        className="w-full"
+                        tooltip={{ formatter: (value) => `${value}x` }}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+              
+              <Divider />
+              
+              <div className="mt-6">
+                <Paragraph>
+                  <ul className="list-disc pl-5 text-gray-600">
+                    <li>支持多语言转换</li>
+                    <li>自然流畅的语音输出</li>
+                    <li>可调节语速满足不同需求</li>
+                  </ul>
+                </Paragraph>
+              </div>
+            </Card>
+          </Col>
           
-          {/* 文本输入区 */}
-          <div className="mb-6">
-            <TextArea
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="请输入要转换为语音的文本..."
-              autoSize={{ minRows: 6, maxRows: 12 }}
-              className="w-full p-4 text-base"
-              maxLength={500}
-              showCount
-            />
-          </div>
-          
-          {/* 按钮区 */}
-          <div className="flex justify-end gap-4">
-            <Button 
-              type="primary" 
-              onClick={handleListen}
-              size="large"
+          <Col span={14}>
+            <Card 
+              title={<><FileTextOutlined /> 文本输入</>} 
+              className="mb-6 shadow-sm" 
+              bordered={false}
             >
-              试听
-            </Button>
-            <Button 
-              type="primary" 
-              onClick={handleGenerate}
-              size="large"
-            >
-              生成
-            </Button>
-          </div>
-        </div>
+              {/* 文本输入区 */}
+              <div className="mb-6">
+                <TextArea
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  placeholder="请输入要转换为语音的文本..."
+                  autoSize={{ minRows: 8, maxRows: 14 }}
+                  className="w-full p-4 text-base"
+                  maxLength={500}
+                  showCount
+                />
+              </div>
+              
+              {/* 按钮区 */}
+              <div className="flex justify-end gap-4">
+                <Button 
+                  type="primary" 
+                  onClick={handleListen}
+                  size="large"
+                  icon={<SoundOutlined />}
+                >
+                  试听
+                </Button>
+                <Button 
+                  type="primary" 
+                  onClick={handleGenerate}
+                  size="large"
+                >
+                  生成
+                </Button>
+              </div>
+            </Card>
+          </Col>
+        </Row>
         
         {/* 音频播放器 */}
         {showPlayer && (
-          <Card className="mt-6 bg-blue-50">
+          <Card className="mt-6 bg-blue-50 shadow-md">
             <div className="text-center mb-4">
               {loading ? (
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center py-4">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-                  <span className="ml-3">正在{isPlaying ? '加载' : '生成'}音频...</span>
+                  <span className="ml-3 text-lg">正在{isPlaying ? '加载' : '生成'}音频...</span>
                 </div>
               ) : (
-                <div>
+                <div className="py-2 text-lg font-medium">
                   {`${language === 'zh' ? '汉语' : (language === 'en' ? '英语' : '维吾尔语')} | ${voice === 'male' ? '男声' : '女声'} | 语速: ${speed}`}
                 </div>
               )}

@@ -8,7 +8,7 @@ export const categories: Category[] = [
       {
         id: "text-to-speech",
         name: "文字转语音",
-        icon: "/resource/images/tool-icon.svg",
+        icon: "/resource/images/sheep.png",
         description: "将文本转换为自然流畅的语音，支持多种语言和音色",
         rating: 4.7,
         usageCount: "45.3万次使用",
@@ -19,7 +19,7 @@ export const categories: Category[] = [
       {
         id: "speech-to-text",
         name: "音频转文字",
-        icon: "/resource/images/tool-icon.svg",
+        icon: "/resource/images/sheep.png",
         description: "准确识别音频内容并转换为文本，支持多种语言和方言",
         rating: 4.7,
         usageCount: "待上线",
@@ -37,7 +37,7 @@ export const categories: Category[] = [
       {
         id: "resume-maker",
         name: "智能简历生成",
-        icon: "/resource/images/tool-icon.svg",
+        icon: "/resource/images/sheep.png",
         description: "根据个人信息自动生成专业简历，支持多种模板和格式",
         rating: 4.8,
         usageCount: "35.6万次使用",
@@ -55,7 +55,7 @@ export const categories: Category[] = [
       {
         id: "photo-enhancer",
         name: "照片增强",
-        icon: "/resource/images/tool-icon.svg",
+        icon: "/resource/images/sheep.png",
         description: "智能提升照片质量，修复损坏照片，增强色彩和清晰度",
         rating: 4.9,
         usageCount: "89.7万次使用",
@@ -73,7 +73,7 @@ export const categories: Category[] = [
       {
         id: "word-pdf-converter",
         name: "Word⇄PDF",
-        icon: "/resource/images/tool-icon.svg",
+        icon: "/resource/images/sheep.png",
         description: "智能转换Word和PDF文档格式，保留原始排版和样式",
         rating: 4.8,
         usageCount: "56.7万次使用",
@@ -84,7 +84,7 @@ export const categories: Category[] = [
       {
         id: "image-to-word",
         name: "图片转Word",
-        icon: "/resource/images/tool-icon.svg",
+        icon: "/resource/images/sheep.png",
         description: "自动识别图片中的文字和表格，转换为可编辑Word文档",
         rating: 4.7,
         usageCount: "49.3万次使用",

@@ -9,10 +9,21 @@ interface ToolCardProps {
 }
 
 const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
-  // 特殊处理文字转语音工具的链接
+  // 根据工具类型生成合适的链接
   const toolLink = tool.id === 'text-to-speech' 
     ? '/text-to-speech' 
-    : `/tool/${tool.id}`;
+    : tool.id === 'speech-to-text'
+      ? '/tools/speech-to-text'
+      : `/tool/${tool.id}`;
+
+  // 当工具ID为"speech-to-text"时，链接到"/tools/speech-to-text"页面
+  const getToolLink = (toolId: string): string => {
+    if (toolId === "speech-to-text") {
+      return "/tools/speech-to-text";
+    }
+    // 处理其他工具的链接...
+    return `/tool/${toolId}`;
+  };
 
   return (
     <Link to={toolLink}>

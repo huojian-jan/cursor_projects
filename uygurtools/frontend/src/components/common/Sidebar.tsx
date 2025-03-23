@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Layout, Menu } from 'antd';
 import { categories } from '../../data/toolsData';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
 const { Sider } = Layout;
 
 const Sidebar: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   // Function to get icon based on category id
   const getCategoryIcon = (categoryId: string) => {
@@ -22,6 +24,39 @@ const Sidebar: React.FC = () => {
     };
     
     return iconMap[categoryId] || iconMap.default;
+  };
+  
+  // 检查是否有需要滚动到的元素ID (从会话存储中获取)
+  useEffect(() => {
+    const scrollToElement = sessionStorage.getItem('scrollToElement');
+    if (scrollToElement && location.pathname === '/') {
+      // 清除存储
+      sessionStorage.removeItem('scrollToElement');
+      
+      // 添加一点延迟确保DOM已完全加载
+      setTimeout(() => {
+        const element = document.getElementById(scrollToElement);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    }
+  }, [location.pathname]);
+
+  const handleCategoryClick = (categoryId: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    if (location.pathname === '/') {
+      // 在首页直接滚动
+      const element = document.getElementById(categoryId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // 不在首页时，导航到首页并设置会话存储
+      sessionStorage.setItem('scrollToElement', categoryId);
+      navigate('/'); // 使用React Router的导航
+    }
   };
 
   return (
@@ -41,7 +76,9 @@ const Sidebar: React.FC = () => {
           <Menu mode="inline" className="border-r-0" defaultSelectedKeys={['audio-tools']}>
             {categories.map(category => (
               <Menu.Item key={category.id} icon={getCategoryIcon(category.id)}>
-                <Link to={`#${category.id}`}>{category.title}</Link>
+                <a href={`#${category.id}`} onClick={(e) => handleCategoryClick(category.id, e)}>
+                  {category.title}
+                </a>
               </Menu.Item>
             ))}
           </Menu>

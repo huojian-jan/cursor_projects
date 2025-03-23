@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123456",
+      "email": "admin@example.com",
+      "phone": "13800138000",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "role": "admin",
+      "createdAt": "2023-01-01T08:00:00.000Z",
+      "lastLogin": "2023-10-15T14:30:25.000Z"
+    },
+    {
+      "id": "2",
+      "username": "zhangsan",
+      "password": "password123",
+      "email": "zhangsan@example.com",
+      "phone": "13900139001",
+      "avatar": "https://randomuser.me/api/portraits/men/22.jpg",
+      "role": "user",
+      "createdAt": "2023-02-15T10:20:00.000Z",
+      "lastLogin": "2023-10-14T09:45:12.000Z"
+    },
+    {
+      "id": "3",
+      "username": "lisi",
+      "password": "test123",
+      "email": "lisi@example.com",
+      "phone": "13700137002",
+      "avatar": "https://randomuser.me/api/portraits/women/22.jpg",
+      "role": "user",
+      "createdAt": "2023-03-22T14:30:00.000Z",
+      "lastLogin": "2023-10-13T16:20:05.000Z"
+    },
+    {
+      "id": "4",
+      "username": "wangwu",
+      "password": "wang123",
+      "email": "wangwu@example.com",
+      "phone": "13600136003",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "role": "user",
+      "createdAt": "2023-04-10T09:15:00.000Z",
+      "lastLogin": "2023-10-10T11:35:42.000Z"
+    },
+    {
+      "id": "5",
+      "username": "zhaoliu",
+      "password": "zhaoliu888",
+      "email": "zhaoliu@example.com",
+      "phone": "13500135004",
+      "avatar": "https://randomuser.me/api/portraits/women/32.jpg",
+      "role": "user",
+      "createdAt": "2023-05-05T11:40:00.000Z",
+      "lastLogin": "2023-10-08T19:22:18.000Z"
+    },
+    {
+      "id": "6",
+      "username": "qianqi",
+      "password": "qianqi777",
+      "email": "qianqi@example.com",
+      "phone": "13400134005",
+      "avatar": "https://randomuser.me/api/portraits/men/41.jpg",
+      "role": "vip",
+      "createdAt": "2023-06-18T16:25:00.000Z",
+      "lastLogin": "2023-10-12T08:15:30.000Z",
+      "vipExpiry": "2024-06-18T16:25:00.000Z"
+    },
+    {
+      "id": "7",
+      "username": "sunba",
+      "password": "sunba666",
+      "email": "sunba@example.com",
+      "phone": "13300133006",
+      "avatar": "https://randomuser.me/api/portraits/women/41.jpg",
+      "role": "vip",
+      "createdAt": "2023-07-07T13:10:00.000Z",
+      "lastLogin": "2023-10-14T22:05:45.000Z",
+      "vipExpiry": "2024-01-07T13:10:00.000Z"
+    },
+    {
+      "id": "8",
+      "username": "zhoujiu",
+      "password": "zhou123",
+      "email": "zhoujiu@example.com",
+      "phone": "13200132007",
+      "avatar": "https://randomuser.me/api/portraits/men/55.jpg",
+      "role": "user",
+      "createdAt": "2023-08-12T10:50:00.000Z",
+      "lastLogin": "2023-10-11T15:40:22.000Z"
+    },
+    {
+      "id": "9",
+      "username": "wushi",
+      "password": "wushi999",
+      "email": "wushi@example.com",
+      "phone": "13100131008",
+      "avatar": "https://randomuser.me/api/portraits/women/55.jpg",
+      "role": "user",
+      "createdAt": "2023-09-01T08:30:00.000Z",
+      "lastLogin": "2023-10-09T12:18:56.000Z"
+    },
+    {
+      "id": "10",
+      "username": "test",
+      "password": "test123",
+      "email": "test@example.com",
+      "phone": "13000130009",
+      "avatar": "https://randomuser.me/api/portraits/men/66.jpg",
+      "role": "user",
+      "createdAt": "2023-10-01T09:00:00.000Z",
+      "lastLogin": "2023-10-15T10:25:33.000Z"
+    }
+  ]
+} 

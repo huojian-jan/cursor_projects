@@ -9,20 +9,39 @@ interface ToolCardProps {
 }
 
 const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
-  // 根据工具类型生成合适的链接
-  const toolLink = tool.id === 'text-to-speech' 
-    ? '/text-to-speech' 
-    : tool.id === 'speech-to-text'
-      ? '/tools/speech-to-text'
-      : `/tool/${tool.id}`;
+  // 使用工具中定义的path属性，如果存在的话
+  const toolLink = tool.path ? tool.path : 
+    tool.id === 'text-to-speech' 
+      ? '/text-to-speech' 
+      : tool.id === 'speech-to-text'
+        ? '/speech-to-text'
+        : tool.id === 'resume-templates'
+          ? '/resume-templates'
+          : tool.id === 'word-pdf-converter'
+            ? '/word-pdf-converter'
+            : tool.id === 'id-photo-maker'
+              ? '/id-photo-maker'
+            : tool.id === 'image-to-word'
+              ? '/image-to-word'
+              : `/tool/${tool.id}`;
 
-  // 当工具ID为"speech-to-text"时，链接到"/tools/speech-to-text"页面
+  // 当工具ID为特殊工具时，链接到对应页面
   const getToolLink = (toolId: string): string => {
     if (toolId === "speech-to-text") {
       return "/tools/speech-to-text";
+    } else if (toolId === "resume-templates") {
+      return "/resume-templates";
+    } else if (toolId === "word-pdf-converter") {
+      return "/word-pdf-converter";
+    } else if (toolId === "id-photo-maker") {
+      return "/id-photo-maker";
     }
     // 处理其他工具的链接...
     return `/tool/${toolId}`;
+  };
+
+  const handleCardClick = () => {
+    window.location.href = toolLink; // 使用原生导航方法
   };
 
   return (

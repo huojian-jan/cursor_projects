@@ -35,16 +35,27 @@ export const categories: Category[] = [
     title: "AI简历",
     tools: [
       {
-        id: "resume-maker",
-        name: "智能简历生成",
+        id: "resume-templates",
+        name: "简历模板",
         icon: "/resource/images/sheep.png",
-        description: "根据个人信息自动生成专业简历，支持多种模板和格式",
-        rating: 4.8,
-        usageCount: "35.6万次使用",
+        description: "提供多种精美专业的简历模板，一键套用，快速生成",
+        rating: 4.6,
+        usageCount: "31.2万次使用",
         category: "AI简历",
         categoryId: "resume-tools",
-        badge: "简历生成"
+        badge: "模板库"
       },
+      {
+        id: "resume-polisher",
+        name: "简历润色",
+        icon: "/resource/images/sheep.png",
+        description: "智能优化简历内容，突出亮点，提升专业度和竞争力",
+        rating: 4.7,
+        usageCount: "待上线",
+        category: "AI简历",
+        categoryId: "resume-tools",
+        badge: "内容优化"
+      }
       // 添加更多简历工具...
     ]
   },
@@ -53,15 +64,26 @@ export const categories: Category[] = [
     title: "AI照片",
     tools: [
       {
-        id: "photo-enhancer",
-        name: "照片增强",
+        id: "id-photo-maker",
+        name: "证件照制作",
         icon: "/resource/images/sheep.png",
-        description: "智能提升照片质量，修复损坏照片，增强色彩和清晰度",
+        description: "一键制作各种规格证件照，智能抠图换底色，符合官方标准",
         rating: 4.9,
-        usageCount: "89.7万次使用",
+        usageCount: "76.3万次使用",
         category: "AI照片",
         categoryId: "photo-tools",
-        badge: "图像处理"
+        badge: "证件照"
+      },
+      {
+        id: "old-photo-restoration",
+        name: "老照片修复",
+        icon: "/resource/images/sheep.png",
+        description: "AI自动修复老旧照片，去除划痕、磨损和褪色，恢复原有色彩",
+        rating: 4.8,
+        usageCount: "待上线",
+        category: "AI照片",
+        categoryId: "photo-tools",
+        badge: "照片修复"
       },
       // 添加更多照片工具...
     ]
